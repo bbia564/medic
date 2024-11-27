@@ -12,7 +12,7 @@ class SetBuildView extends GetView<PageLogic> {
       body: Center(
         child: Obx(
           () => controller.cartwright.value
-              ? const CircularProgressIndicator(color: Colors.blue)
+              ? const CircularProgressIndicator(color: Colors.green)
               : buildError(),
         ),
       ),
