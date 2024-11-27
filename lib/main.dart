@@ -4,8 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:medication_record/api/db.dart';
-import 'package:medication_record/utils/app_router.dart';
-import 'package:medication_record/utils/routers.dart';
+import 'package:medication_record/ui/settings/edit/edit/view.dart';
+import 'package:medication_record/ui/settings/edit/view.dart';
+import 'package:medication_record/ui/settings/set_build/set_build_binding.dart';
+import 'package:medication_record/ui/settings/set_build/set_build_view.dart';
+import 'package:medication_record/ui/view.dart';
+import 'package:medication_record/utils/app_ruler.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
 void main() {
@@ -59,8 +63,8 @@ class _AppState extends State<App> {
             child: GetMaterialApp(
               title: '',
               debugShowCheckedModeBanner: false,
-              getPages: AppRouter.pages,
-              initialRoute: Routers.main,
+              getPages: Roof,
+              initialRoute: '/',
               // navigatorObservers: [
               //   FlutterSmartDialog.observer,
               // ],
@@ -86,3 +90,11 @@ class _AppState extends State<App> {
     );
   }
 }
+
+List<GetPage<dynamic>> Roof = [
+  GetPage(name: '/', page: () => const SetBuildView(),binding: SetBuildBinding()),
+  GetPage(name: '/main', page: () => MainPage()),
+  GetPage(name: '/edit_rule', page: () => const AppRuler()),
+  GetPage(name: '/edit_list', page: () => EditListPage()),
+  GetPage(name: '/edit', page: () => EditPage()),
+];

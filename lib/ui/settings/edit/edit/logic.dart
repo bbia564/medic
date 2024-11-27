@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -9,7 +8,6 @@ import 'package:medication_record/api/db.dart';
 import 'package:medication_record/api/model.dart';
 import 'package:medication_record/ui/logic.dart';
 import 'package:medication_record/ui/settings/edit/edit/state.dart';
-import 'package:medication_record/utils/routers.dart';
 import 'package:medication_record/widgets/image_picker_dialog.dart';
 import 'package:medication_record/widgets/toast_util.dart';
 import 'package:path_provider/path_provider.dart';
@@ -155,7 +153,7 @@ class EditingLogic extends GetxController {
     state.type = 'particle'.obs;
     state.valueTF.text = '';
     state.cuTime = ''.obs;
-    Get.until((route) => Get.currentRoute == Routers.main);
+    Get.until((route) => Get.currentRoute == '/main');
     MainLogic lo = Get.find<MainLogic>();
     lo.toPage(0);
   }

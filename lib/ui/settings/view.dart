@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:medication_record/resource/R.dart';
 import 'package:medication_record/ui/settings/logic.dart';
-import 'package:medication_record/utils/app_color.dart';
-import 'package:medication_record/utils/routers.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -70,7 +68,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                     GestureDetector(
                         onTap: () {
-                          Get.toNamed(Routers.editList);
+                          Get.toNamed('/edit_list');
                         },
                         child: _item(title: 'Edit medication')),
                     Container(

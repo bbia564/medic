@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:medication_record/api/model.dart';
 import 'package:medication_record/resource/R.dart';
 import 'package:medication_record/ui/settings/edit/logic.dart';
-import 'package:medication_record/utils/routers.dart';
 import 'package:medication_record/widgets/load_image.dart';
 
 class EditListPage extends StatefulWidget {
@@ -53,8 +52,7 @@ class _EditListPageState extends State<EditListPage> {
                   children: logic.state.teas.map((element) {
                     return InkWell(
                         onTap: () {
-                          print('================');
-                          Get.toNamed(Routers.edit, parameters: {
+                          Get.toNamed('/edit', parameters: {
                             'data': jsonEncode(element.toJson())
                           });
                         },
