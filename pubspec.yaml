@@ -1,0 +1,48 @@
+name: medication_record
+description: "A new Flutter project."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.3 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.9.1
+  pull_to_refresh_flutter3: ^2.0.2
+  loading_animation_widget: ^1.2.0+4
+  get: ^4.6.6
+  flutter_easyloading: ^3.0.5
+  shimmer_animation: ^2.1.0
+  extended_image: ^8.1.1
+  sqflite: ^2.3.2
+  faker: ^2.1.0
+  image_picker: ^1.0.4
+  permission_handler: ^10.0.0
+  date_format: ^2.0.7
+  r_dotted_line_border: ^0.1.1
+  path_provider: ^2.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  validators: 3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  image_path: "assets/images/img.png"
+  android: true
+  ios: true
+  web:
+    generate: true
+    image_path: "assets/images/img.png"
+    background_color: "#FFFFFF"
+    theme_color: "#FFFFFF"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
